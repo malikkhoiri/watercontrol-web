@@ -108,7 +108,7 @@
 
                     if(myJson.ph > 8)
                         document.getElementById('statusPH').innerHTML = "Basa";
-                    else if (myJson.temp < 6)
+                    else if (myJson.ph < 6)
                         document.getElementById('statusPH').innerHTML = "Asam";
                     else
                         document.getElementById('statusPH').innerHTML = "Normal";
@@ -117,7 +117,7 @@
 
                     if(myJson.high >= 11)
                         document.getElementById('statusHigh').innerHTML = "Tinggi";
-                    else if (myJson.temp <= 9)
+                    else if (myJson.high <= 9)
                         document.getElementById('statusHigh').innerHTML = "Rendah";
                     else
                         document.getElementById('statusHigh').innerHTML = "Normal";
