@@ -99,28 +99,28 @@
                 .then(function(myJson) {
                     if(myJson.temp > 30)
                         document.getElementById('statusTemp').innerHTML = "Panas";
-                    else if (myJson.temp < 25)
-                        document.getElementById('statusTemp').innerHTML = "Dingin";
-                    else
+                    else if (myJson.temp >= 25)
                         document.getElementById('statusTemp').innerHTML = "Normal";
+                    else
+                        document.getElementById('statusTemp').innerHTML = "Dingin";
 
                     document.getElementById('ph').innerHTML = myJson.ph;
 
                     if(myJson.ph > 8)
                         document.getElementById('statusPH').innerHTML = "Basa";
-                    else if (myJson.ph < 6)
-                        document.getElementById('statusPH').innerHTML = "Asam";
-                    else
+                    else if (myJson.ph >= 6)
                         document.getElementById('statusPH').innerHTML = "Normal";
+                    else
+                        document.getElementById('statusPH').innerHTML = "Asam";
 
                     document.getElementById('high').innerHTML = myJson.high;
 
                     if(myJson.high >= 11)
                         document.getElementById('statusHigh').innerHTML = "Tinggi";
-                    else if (myJson.high <= 9)
-                        document.getElementById('statusHigh').innerHTML = "Rendah";
-                    else
+                    else if (myJson.high > 9)
                         document.getElementById('statusHigh').innerHTML = "Normal";
+                    else
+                        document.getElementById('statusHigh').innerHTML = "Rendah";
 
                     document.getElementById('quality').innerHTML = myJson.q;
 
