@@ -28,7 +28,7 @@ class WelcomeController extends Controller
             "temp" => $request->input("temp"),
             "ph" => $request->input("ph"),
             "high" => $request->input("high"),
-            "quality" => $request->input("q"),
+            "q" => $request->input("q"),
             "heater" => $request->input("heater"),
         ]));
     }

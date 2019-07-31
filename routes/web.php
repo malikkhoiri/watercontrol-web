@@ -26,7 +26,9 @@ Route::get('/data', function (){
         File::put($pathFile, json_encode([
             "temp" => 0,
             "ph" => 0,
-            "high" => 0
+            "high" => 0,
+            "q" => 0,
+            "heater" => 0
         ]));
 
         $jsonString = file_get_contents(storage_path('app/public/data.json'));
